@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <div>
+      <!--TODO:ここにヘッダー作成お願いします -->
+      <% if user_signed_in? %>
+        投稿
+      <% else %>
+        <%=link_to("ログイン","/login") %>
+      <% end %>
+      <!--TODO:ヘッダーここまで -->
+    </div>
+    
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>

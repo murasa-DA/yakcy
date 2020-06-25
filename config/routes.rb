@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   root 'home#index'
+  resources :articles
 
-  Rails.application.routes.draw do
-  devise_for :users, controllers: {
+  devise_for :users, :controllers => {
     sessions: 'users/sessions'
   }
-  end
 
   devise_scope :user do
     get "user/:id", :to => "users/registrations#detail"
