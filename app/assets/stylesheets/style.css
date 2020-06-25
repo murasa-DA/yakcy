@@ -1,0 +1,33 @@
+/*
+common style
+*/
+.common_border{
+    border: solid gray 2px;
+    border-radius: 20px;
+}
+
+input{
+}
+
+/*
+login,sign_up,reset_pass
+*/
+.field{
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    text-align: left;
+}
+
+#login_form{
+    text-align: center;
+}
+
+#user_create{
+    text-align: center;
+}
+
+#new_user{
+    text-align: center;
+}
