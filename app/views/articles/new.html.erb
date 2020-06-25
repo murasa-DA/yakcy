@@ -1,0 +1,15 @@
+<h1>記事作成画面</h1>
+
+<div>
+  <%= form_for(@article) do |f| %>
+    <div>
+      <%= f.label :article_title %>
+      <%= f.text_field :article_title %>
+    </div>
+    <div>
+      <%= f.label :article_data %>
+      <%= f.text_area :article_data %>
+    </div>
+    <%= f.submit "追加" %>
+  <%end%>
+</div>
