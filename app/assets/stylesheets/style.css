@@ -6,6 +6,10 @@ common style
     border-radius: 20px;
 }
 
+.flexbox{
+    display: flex;
+}
+
 /*
 header
 */
@@ -13,6 +17,7 @@ header
     height: 100px;
     background-color: #888888;
 }
+
 /*
 footer
 */
@@ -22,7 +27,35 @@ footer
 }
 
 /*
-login,sign_up,reset_pass
+homepage style
+*/
+#topLogo{
+    height: 200px;
+    background-color: lightgreen;
+}
+
+#mainContent{
+    height: 1000px;
+    width: 75%;
+    background-color: lightblue;
+}
+
+#sideber{
+    width: 25%;
+}
+
+.article{
+    background-color: white;
+    margin: 10px 10px 0px 10px;
+    padding: 5px 0px 5px 20px;
+}
+
+.article_title{
+    margin: 5px 0px 5px 10px;
+}
+
+/*
+login,sign_up,reset_pass style
 */
 .field{
     margin-top: 10px;
