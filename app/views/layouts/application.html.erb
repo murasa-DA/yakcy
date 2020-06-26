@@ -10,15 +10,23 @@
   </head>
 
   <body>
-    <div id="header">
+
+    <div id="header" style="height:100px;background-color:#888888">
       ヘッダー（ロゴ、ログイン、会員ページのリンクなど）
+
       <% if user_signed_in? %>
-        投稿
+        <%= link_to("投稿", "/articles/new") %>
+        <%= link_to("ログアウト","/logout") %>
       <% else %>
+
         <%= link_to "ログイン", "/users/sign_in" %>
         <%= link_to "アカウント作成", "/users/sign_up" %>
+
       <% end %>
     </div>
+    
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <%= yield %>
 
