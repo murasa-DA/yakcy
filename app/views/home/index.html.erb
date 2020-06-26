@@ -1,18 +1,22 @@
-
-<div id="Toplogo" style="height:200px;background-color:lightgreen">
+<div id="topLogo">
     ロゴ画像
 </div>
 
-<div id="mainContent" style="display:flex">
-    <div id="articleList" style="height:1000px;width:75%;background-color:lightblue">
-        <p style="margin:0px">新着記事一覧</p>
-        <div id="articleDetail">
+<div class="flexbox">
+    <div id="mainContent">
+        <h2>新着記事一覧</h2>
+        <div id="articleList">
             <% @articles.each do |a| %>
-                <%= a.article_title.to_s%>
+                <a href="/articles/<%= a.id.to_s %>" >
+                    <div class="article common_border">
+                        <h2 class="article_title"><%= a.article_title.to_s %></h2>
+                        <%= a.updated_at.to_s %>
+                    </div>
+                </a>
             <% end %>
         </div>
     </div>
-    <div id="sideber" style="width:25%">
+    <div id="sideber">
         サイドバー
     </div>
 </div>
