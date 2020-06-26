@@ -10,20 +10,28 @@
   </head>
 
   <body>
+
     <div id="header" style="height:100px;background-color:#888888">
-      <!--TODO:ここにヘッダー作成お願いします -->
+      ヘッダー（ロゴ、ログイン、会員ページのリンクなど）
+
       <% if user_signed_in? %>
         <%= link_to("投稿", "/articles/new") %>
         <%= link_to("ログアウト","/logout") %>
       <% else %>
-        新規登録
-        <%=link_to("ログイン","/login") %>
-      <% end %>
-      <!--TODO:ヘッダーここまで -->
-    </div>
 
+        <%= link_to "ログイン", "/users/sign_in" %>
+        <%= link_to "アカウント作成", "/users/sign_up" %>
+
+      <% end %>
+    </div>
+    
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
     <%= yield %>
+
+    <div id="footer">
+      フッター（コピーライトなど）
+    </div>
   </body>
 </html>
