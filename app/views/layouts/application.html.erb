@@ -10,18 +10,20 @@
   </head>
 
   <body>
-    <div>
-      <!--TODO:ここにヘッダー作成お願いします -->
+    <div id="header">
+      ヘッダー（ロゴ、ログイン、会員ページのリンクなど）
       <% if user_signed_in? %>
         投稿
       <% else %>
-        <%=link_to("ログイン","/login") %>
+        <%= link_to "ログイン", "/users/sign_in" %>
+        <%= link_to "アカウント作成", "/users/sign_up" %>
       <% end %>
-      <!--TODO:ヘッダーここまで -->
     </div>
-    
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
     <%= yield %>
+
+    <div id="footer">
+      フッター（コピーライトなど）
+    </div>
   </body>
 </html>

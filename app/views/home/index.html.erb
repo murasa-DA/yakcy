@@ -1,9 +1,3 @@
-<div id="header" style="height:100px;background-color:#888888">
-    ヘッダー（ロゴ、ログイン、会員ページのリンクなど）
-    <%= link_to "ログイン", "/users/sign_in" %>
-    <%= link_to "アカウント作成", "/users/sign_up" %>
-</div>
-
 <div id="Toplogo" style="height:200px;background-color:lightgreen">
     ロゴ画像
 </div>
@@ -12,14 +6,12 @@
     <div id="articleList" style="height:1000px;width:75%;background-color:lightblue">
         <p style="margin:0px">新着記事一覧</p>
         <div id="articleDetail">
-            記事リンク
+            <% @articles.each do |a| %>
+                <%= a.article_title.to_s%>
+            <% end %>
         </div>
     </div>
     <div id="sideber" style="width:25%">
         サイドバー
     </div>
-</div>
-
-<div id="footer" style="height:100px;background-color:#888888">
-    フッター（コピーライトなど）
 </div>

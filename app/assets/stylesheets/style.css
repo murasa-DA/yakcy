@@ -6,7 +6,19 @@ common style
     border-radius: 20px;
 }
 
-input{
+/*
+header
+*/
+#header{
+    height: 100px;
+    background-color: #888888;
+}
+/*
+footer
+*/
+#footer{
+    height: 100px;
+    background-color: #888888;
 }
 
 /*
