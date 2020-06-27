@@ -1,5 +1,14 @@
 <h1> <%= @article.article_title %></h1>
 
 <div>
-  <%= @article.article_data %>
+  <% if Like.find_by(article_id: params[:id],user_id: current_user.id) != nil %>
+    <%= button_to 'いいね取り消す', article_like_path(@article), method: :delete %>
+  <% else %>
+    <%= button_to 'いいね', article_likes_path(@article) %>
+  <% end %>
+
+</div>
+<div>
+
+    <%= @article.article_data %>
 </div>
