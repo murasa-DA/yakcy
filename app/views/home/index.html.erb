@@ -7,12 +7,10 @@
         <h2>新着記事一覧</h2>
         <div id="articleList">
             <% @articles.each do |a| %>
-                <a href="/articles/<%= a.id.to_s %>" >
-                    <div class="article common_border">
-                        <h2 class="article_title"><%= a.article_title.to_s %></h2>
-                        <%= a.updated_at.to_s %>
-                    </div>
-                </a>
+              <div class="article common_border">
+                  <a href="/articles/<%= a.id.to_s %>" ><h2 class="article_title"><%= a.article_title.to_s %></h2></a>
+                  <%= a.updated_at.to_s %>, by <%= User.find(a.user_id).email %>
+              </div>
             <% end %>
         </div>
     </div>
