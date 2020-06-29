@@ -5,8 +5,7 @@ body{
   /* ブラウザcssをリセット */
   margin: 0px;
   background-color:#e0e0e0;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-family: 'M PLUS 1p', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont,'Roboto Condensed', 'M PLUS 1p', sans-serif;
 }
 
 a{
@@ -138,4 +137,80 @@ login,sign_up,reset_pass style
 
 #new_user{
     text-align: center;
+}
+
+/*
+artcile style
+*/
+#article-main{
+  width:80%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.article-header-info{
+  height: 40px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.author-image{
+  height: 40px;
+  width:40px;
+}
+
+.article-title{
+  font-size:3rem;
+  font-weight: bold;
+}
+
+.author-name{
+  font-size:1.8rem;
+  margin-left: 10px;
+}
+
+.article-header-time{
+  color:#999;
+  font-size:1.2rem;
+  margin-left: 10px;
+}
+
+.article-button-container{
+  width:100%;
+  margin: 40px 0 20px 0;
+
+}
+
+.article-like-button{
+  height:44px;
+  width:65%;
+  border:2px solid #0066a8;
+  color: #0066a8;
+  background-color: white;
+  font-size: 1.5rem;
+  margin-right: 5%;
+  float: left;
+}
+
+.article-user-button{
+  height: 44px;
+  width:30%;
+  border:2px solid black;
+  color:black;
+  font-size:1.5rem;
+  background-color: white;
+}
+
+.liked{
+  color: white;
+  background-color:#0066a8;
+}
+
+.writer-image{
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
 }
