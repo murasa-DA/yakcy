@@ -17,12 +17,29 @@ a{
     border-radius: 20px;
 }
 
+
+.common_bg_color{
+    background-color: #0066a8;
+}
+
 .article_border{
   border-top: solid gray 1px;
 }
 
 .flexbox{
     display: flex;
+}
+
+.form_div{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.form_submit{
+    background-color: #0066a8;
+    color: white;
+    width: 100%;
+    height: 50px;
 }
 
 /*
@@ -142,17 +159,23 @@ login,sign_up,reset_pass style
 /*
 artcile style
 */
-#articleData{
+#new_article_div{
+    width: 700px;
+}
 
+#articleData{
+    width: 100%;
 }
 
 #buttonArea{
-    position: relative;
+    width: 100%;
 }
 
 .addTagButton{
-    width: 75px;
+    width: 100px;
     height: 40px;
+    margin: 0 5px;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
