@@ -1,13 +1,29 @@
 /*
 common style
 */
+body{
+  /* ブラウザcssをリセット */
+  margin: 0px;
+  background-color:#e0e0e0;
+  font-family: -apple-system, BlinkMacSystemFont,'Roboto Condensed', 'M PLUS 1p', sans-serif;
+}
+
+a{
+  text-decoration: none !important;
+}
+
 .common_border{
     border: solid gray 2px;
     border-radius: 20px;
 }
 
+
 .common_bg_color{
     background-color: #0066a8;
+}
+
+.article_border{
+  border-top: solid gray 1px;
 }
 
 .flexbox{
@@ -30,9 +46,25 @@ common style
 header
 */
 #header{
-    height: 100px;
-    background-color: #888888;
+    height: 56px;
+    background-color: #0066a8;
 }
+
+.header-img-element{
+  height: 56px;
+  padding: 5px;
+  float: left;
+}
+
+.header-element{
+  height:560px;
+  float:none;
+}
+
+.head-logo{
+  height: calc(100% - 10px);
+}
+
 
 /*
 footer
@@ -51,9 +83,9 @@ homepage style
 }
 
 #mainContent{
-    height: 1000px;
-    width: 75%;
-    background-color: lightblue;
+    width: calc(100% - 20px)%;
+    background-color: white;
+    margin:0 10px 20px 10px;
 }
 
 #sideber{
@@ -62,12 +94,43 @@ homepage style
 
 .article{
     background-color: white;
-    margin: 10px 10px 0px 10px;
-    padding: 5px 0px 5px 20px;
+    padding: 16px;
+    display: flex;
+
 }
 
 .article_title{
-    margin: 5px 0px 5px 10px;
+    margin: 5px 0px 5px 0px;
+    color: black;
+    font-weight: bold;
+}
+
+.home-articleicon{
+  height: 100%;
+  width: 100%;
+}
+
+.tr-item{
+  height: 60px;
+  width:60px;
+}
+
+.tr-item-body{
+  margin-left: 20px;
+}
+
+.home-icon{
+  height:30px;
+  width:30px;
+  margin: 0 10px 0 10px;
+}
+
+.headline{
+  font-size:1.5rem;
+  display: flex;
+  margin-left: 20px;
+  height:30px;
+  padding:5px 0 5px 0;
 }
 
 /*
@@ -94,7 +157,7 @@ login,sign_up,reset_pass style
 }
 
 /*
-article_new style
+artcile style
 */
 #new_article_div{
     width: 700px;
@@ -117,3 +180,77 @@ article_new style
     justify-content: center;
     align-items: center;
 }
+
+#article-main{
+  width:80%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.article-header-info{
+  height: 40px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.author-image{
+  height: 40px;
+  width:40px;
+}
+
+.article-title{
+  font-size:3rem;
+  font-weight: bold;
+}
+
+.author-name{
+  font-size:1.8rem;
+  margin-left: 10px;
+}
+
+.article-header-time{
+  color:#999;
+  font-size:1.2rem;
+  margin-left: 10px;
+}
+
+.article-button-container{
+  width:100%;
+  margin: 40px 0 20px 0;
+
+}
+
+.article-like-button{
+  height:44px;
+  width:65%;
+  border:2px solid #0066a8;
+  color: #0066a8;
+  background-color: white;
+  font-size: 1.5rem;
+  margin-right: 5%;
+  float: left;
+}
+
+.article-user-button{
+  height: 44px;
+  width:30%;
+  border:2px solid black;
+  color:black;
+  font-size:1.5rem;
+  background-color: white;
+}
+
+.liked{
+  color: white;
+  background-color:#0066a8;
+}
+
+.writer-image{
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+

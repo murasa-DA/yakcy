@@ -4,24 +4,31 @@
     <title>Yakcy</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
 
     <div id="header">
-      ヘッダー（ロゴ、ログイン、会員ページのリンクなど）
+      <div class="header-img-element"><a href="/">
+        <img class="head-logo" src=<%= asset_path "yakcy_logo.png" %> alt="">
+      </a></div>
+      <div class="header-element">
+        ヘッダー（ロゴ、ログイン、会員ページのリンクなど）
 
-      <% if user_signed_in? %>
-        <%= link_to("投稿", "/articles/new") %>
-        <%= link_to("ログアウト","/logout") %>
-      <% else %>
+        <% if user_signed_in? %>
+          <%= link_to("投稿", "/articles/new") %>
+          <%= link_to("ログアウト","/logout") %>
+        <% else %>
 
-        <%= link_to "ログイン", "/users/sign_in" %>
-        <%= link_to "アカウント作成", "/users/sign_up" %>
+          <%= link_to "ログイン", "/users/sign_in" %>
+          <%= link_to "アカウント作成", "/users/sign_up" %>
 
-      <% end %>
+        <% end %>
+      </div>
     </div>
 
     <p class="notice"><%= notice %></p>

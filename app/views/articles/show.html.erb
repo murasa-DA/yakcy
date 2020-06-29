@@ -1,17 +1,33 @@
-<h1> <%= @article.article_title %></h1>
+
 
 <div>
-  <% if !user_signed_in? %>
-      ログインしてね
-  <% elsif Like.find_by(article_id: params[:id],user_id: current_user.id) != nil %>
-    <%= button_to 'いいね取り消す', article_like_path(@article), method: :delete %>
-  <% else %>
-    <%= button_to 'いいね', article_likes_path(@article) %>
-  <% end %>
-  いいね数:<%= @article.liked_users.count%>
 
 </div>
-<div>
 
-    <%= @article.article_data %>
+
+<div id="article-main">
+  <div class="article-header">
+     <h1 class="article-title"><%= @article.article_title %></h1>
+     <div class="article-header-info">
+       <img class="author-image" src=<%= asset_path "user.png" %> alt="">
+       <p class="author-name"><%= User.find(@article.user_id).email %></p>
+       <p class="article-header-time"><%=@article.updated_at%></p>
+     </div>
+   </div>
+   <div class="article-button-container">
+     <% if !user_signed_in? %>
+         ログインしてね
+     <% elsif Like.find_by(article_id: params[:id],user_id: current_user.id) != nil %>
+       <%= button_to 'Liked!  '+@article.liked_users.count.to_s, article_like_path(@article), {method: :delete, class: "article-like-button liked"} %>
+     <% else %>
+       <%= button_to 'Like!  '+@article.liked_users.count.to_s, article_likes_path(@article), {method: :post, class: "article-like-button"} %>
+     <% end %>
+     <a href=""><button class="article-user-button">
+       <img class="writer-image" src=<%= asset_path "edit.png" %> alt="">
+       Writer
+     </button></a>
+   </div>
+   <div class="article-body">
+     <%= @article.article_data %>
+   </div>
 </div>
