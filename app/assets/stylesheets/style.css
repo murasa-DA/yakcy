@@ -142,6 +142,22 @@ login,sign_up,reset_pass style
 /*
 artcile style
 */
+#articleData{
+
+}
+
+#buttonArea{
+    position: relative;
+}
+
+.addTagButton{
+    width: 75px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #article-main{
   width:80%;
   margin: 0 auto;
@@ -214,3 +230,4 @@ artcile style
   width: 20px;
   margin-right: 5px;
 }
+
