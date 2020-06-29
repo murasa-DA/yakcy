@@ -1,15 +1,13 @@
-<div id="topLogo">
-    ロゴ画像
-</div>
 
-<div class="flexbox">
+<!-- flexbox やるとなんかバグる -->
+<div class="">
     <div id="mainContent">
         <h2>新着記事一覧</h2>
         <div id="articleList">
             <% @articles.each do |a| %>
-              <div class="article common_border">
+              <div class="article article_border">
                   <a href="/articles/<%= a.id.to_s %>" ><h2 class="article_title"><%= a.article_title.to_s %></h2></a>
-                  <%= a.updated_at.to_s %>, by <%= User.find(a.user_id).email %>
+                  <%= a.updated_at.to_s %>, by <%= User.find(a.user_id).email %>, いいね:<%= a.liked_users.count%>
               </div>
             <% end %>
         </div>

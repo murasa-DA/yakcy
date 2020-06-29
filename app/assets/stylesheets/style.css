@@ -1,9 +1,19 @@
 /*
 common style
 */
+body{
+  /* ブラウザcssをリセット */
+  margin: 0px;
+  background-color:#e0e0e0;
+}
+
 .common_border{
     border: solid gray 2px;
     border-radius: 20px;
+}
+
+.article_border{
+  border-top: solid gray 2px;
 }
 
 .flexbox{
@@ -15,8 +25,25 @@ header
 */
 #header{
     height: 100px;
-    background-color: #888888;
+    background-color: #0066a8;
 }
+
+.header-img-element{
+  height: 100px;
+  padding: 10px;
+  float: left;
+}
+
+.header-element{
+  height:100px;
+  float:none;
+}
+
+.head-logo{
+  height: calc(100% - 20px);
+
+}
+
 
 /*
 footer
@@ -37,7 +64,7 @@ homepage style
 #mainContent{
     height: 1000px;
     width: 75%;
-    background-color: lightblue;
+    background-color: white;
 }
 
 #sideber{
