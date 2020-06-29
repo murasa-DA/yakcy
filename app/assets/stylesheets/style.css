@@ -5,6 +5,12 @@ body{
   /* ブラウザcssをリセット */
   margin: 0px;
   background-color:#e0e0e0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+a{
+  text-decoration: none !important;
 }
 
 .common_border{
@@ -13,7 +19,7 @@ body{
 }
 
 .article_border{
-  border-top: solid gray 2px;
+  border-top: solid gray 1px;
 }
 
 .flexbox{
@@ -24,24 +30,23 @@ body{
 header
 */
 #header{
-    height: 100px;
+    height: 56px;
     background-color: #0066a8;
 }
 
 .header-img-element{
-  height: 100px;
-  padding: 10px;
+  height: 56px;
+  padding: 5px;
   float: left;
 }
 
 .header-element{
-  height:100px;
+  height:560px;
   float:none;
 }
 
 .head-logo{
-  height: calc(100% - 20px);
-
+  height: calc(100% - 10px);
 }
 
 
@@ -62,9 +67,9 @@ homepage style
 }
 
 #mainContent{
-    height: 1000px;
-    width: 75%;
+    width: calc(100% - 20px)%;
     background-color: white;
+    margin:0 10px 20px 10px;
 }
 
 #sideber{
@@ -73,12 +78,43 @@ homepage style
 
 .article{
     background-color: white;
-    margin: 10px 10px 0px 10px;
-    padding: 5px 0px 5px 20px;
+    padding: 16px;
+    display: flex;
+
 }
 
 .article_title{
-    margin: 5px 0px 5px 10px;
+    margin: 5px 0px 5px 0px;
+    color: black;
+    font-weight: bold;
+}
+
+.home-articleicon{
+  height: 100%;
+  width: 100%;
+}
+
+.tr-item{
+  height: 60px;
+  width:60px;
+}
+
+.tr-item-body{
+  margin-left: 20px;
+}
+
+.home-icon{
+  height:30px;
+  width:30px;
+  margin: 0 10px 0 10px;
+}
+
+.headline{
+  font-size:1.5rem;
+  display: flex;
+  margin-left: 20px;
+  height:30px;
+  padding:5px 0 5px 0;
 }
 
 /*
