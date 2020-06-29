@@ -1,10 +1,4 @@
 
-
-<div>
-
-</div>
-
-
 <div id="article-main">
   <div class="article-header">
      <h1 class="article-title"><%= @article.article_title %></h1>
@@ -28,6 +22,7 @@
      </button></a>
    </div>
    <div class="article-body">
-     <%= @article.article_data %>
+     <% @body = @article.article_data.gsub(/\R/, "<br>").gsub("<script","スクリプトコートは許可されていません")%>
+     <%= raw(@body) %>
    </div>
 </div>

@@ -220,7 +220,6 @@ artcile style
 .article-button-container{
   width:100%;
   margin: 40px 0 20px 0;
-
 }
 
 .article-like-button{
@@ -232,6 +231,7 @@ artcile style
   font-size: 1.5rem;
   margin-right: 5%;
   float: left;
+
 }
 
 .article-user-button{
@@ -253,4 +253,3 @@ artcile style
   width: 20px;
   margin-right: 5px;
 }
-
