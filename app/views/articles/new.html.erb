@@ -4,11 +4,23 @@
   <%= form_for(@article) do |f| %>
     <div>
       <%= f.label :article_title %>
-      <%= f.text_field :article_title %>
+      <br>
+      <%= f.text_field :article_title, id:"articleTitle" %>
+    </div>
+    <div>
+      TagButtons
+      <br>
+      <div id="buttonArea" class="flexbox">
+        <div id="h1button" class="addTagButton common_border">h1</div>
+        <div id="h2button" class="addTagButton common_border">h2</div>
+        <div id="h3button" class="addTagButton common_border">h3</div>
+        <div id="broadbutton" class="addTagButton common_border">broad</div>
+      </div>
     </div>
     <div>
       <%= f.label :article_data %>
-      <%= f.text_area :article_data %>
+      <br>
+      <%= f.text_area :article_data, id:"articleData", rows:"50", cols:"100" %>
     </div>
     <%= f.submit "追加" %>
   <%end%>
