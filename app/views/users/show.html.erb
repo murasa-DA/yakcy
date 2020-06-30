@@ -1,5 +1,22 @@
-<h1>ユーザーページ</h1>
 
-<%= @user.name %><br>
-<%= @user.email %><br>
-<%= @user.profile %><br>
+
+<div id="userpage">
+  <div class="user-top">
+    <img class="user-image" src=<%= asset_path "user.png" %> alt="">
+  </div>
+  <div class="user-name"><%= @user.name %></div>
+  <div class="user-bottom">
+    <div class="user-buttomItem">
+      <p class="user-buttomItem-upper"><%= Article.where(user_id: @user.id).length %></p>
+      <p class="user-buttomItem-buttom">Posts</p>
+    </div>
+    <div class="user-buttomItem">
+      <p class="user-buttomItem-upper"><%= @user.liked_articles.length %></p>
+      <p class="user-buttomItem-buttom">Likes</p>
+    </div>
+    <div class="user-buttomItem">
+      <p class="user-buttomItem-upper"><%= @liked %></p>
+      <p class="user-buttomItem-buttom">Liked</p>
+    </div>
+  </div>
+</div>
