@@ -83,7 +83,7 @@ homepage style
 }
 
 #mainContent{
-    width: calc(100% - 20px)%;
+    width: calc(100% - 20px);
     background-color: white;
     margin:0 10px 20px 10px;
 }
