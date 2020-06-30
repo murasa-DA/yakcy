@@ -1,4 +1,4 @@
-class TextareaController{
+TextareaController = class{
     constructor(target){
         this.area = document.getElementById(target);
     }
@@ -31,8 +31,11 @@ class TextareaController{
         });
     }
 }
-const taCon = new TextareaController("articleData");
-taCon.setButtonH1("h1button");
-taCon.setButtonH2("h2button");
-taCon.setButtonH3("h3button");
-taCon.setButtonB("broadbutton");
+
+if(document.getElementById("articleData")){
+    var taCon = new TextareaController("articleData");
+    taCon.setButtonH1("h1button");
+    taCon.setButtonH2("h2button");
+    taCon.setButtonH3("h3button");
+    taCon.setButtonB("broadbutton");
+}
