@@ -11,20 +11,26 @@
   <body>
 
     <div id="header">
-      <div class="header-img-element"><a href="/">
-        <img class="head-logo" src=<%= asset_path "yakcy_logo.png" %> alt="">
-      </a></div>
-      <div class="header-element">
-        ヘッダー（ロゴ、ログイン、会員ページのリンクなど）
-
+      <div class="header-img-element">
+        <a href="/">
+          <img class="head-logo" src=<%= asset_path "yakcy_logo.png" %> alt="">
+        </a>
+      </div>
+      <div class="header-element flexbox">
         <% if user_signed_in? %>
-          <%= link_to("投稿", "/articles/new") %>
-          <%= link_to("ログアウト","/logout") %>
+        <div class="header-element-inner text_center_box common_border">
+          <%= link_to "ログアウト","/logout", class:"header-element-link" %>
+         </div>
+         <div class="header-element-inner text_center_box common_border">
+           <%= link_to "投稿", "/articles/new", class:"header-element-link" %>
+          </div>
         <% else %>
-
-          <%= link_to "ログイン", "/users/sign_in" %>
-          <%= link_to "アカウント作成", "/users/sign_up" %>
-
+        <div class="header-element-inner text_center_box common_border">
+          <%= link_to "ログイン", "/users/sign_in", class:"header-element-link" %>
+        </div>
+        <div class="header-element-inner text_center_box common_border">
+          <%= link_to "新規登録", "/users/sign_up", class:"header-element-link" %>
+        </div>
         <% end %>
       </div>
     </div>
@@ -35,8 +41,20 @@
     <%= yield %>
 
     <div id="footer">
-      フッター（コピーライトなど）
-    </div>
+      <div class="footer-element">
+        <div class="footer-element-inner">
+          <img class="footer-logo" src=<%= asset_path "yakcy_logo.png" %> alt="">
+          <div class="footer-element-version">
+          バージョン(α1.0)
+          </div>
+        </div>
+      </div>
+      <div class="footer-element">
+        <div class="footer-element-link">
+          <a href="/">Home</a>
+        </div>
+      </div>
+  </div>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
