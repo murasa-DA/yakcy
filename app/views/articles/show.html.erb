@@ -10,7 +10,7 @@
    </div>
    <div class="article-button-container">
      <% if !user_signed_in? %>
-         ログインしてね
+         <%= button_to 'Like!  '+@article.liked_users.count.to_s, login_url, {method: :get, class: "article-like-button"} %>
      <% elsif Like.find_by(article_id: params[:id],user_id: current_user.id) != nil %>
        <%= button_to 'Liked!  '+@article.liked_users.count.to_s, article_like_path(@article), {method: :delete, class: "article-like-button liked"} %>
      <% else %>
@@ -24,5 +24,18 @@
    <div class="article-body">
      <% @body = @article.article_data.gsub(/\R/, "<br>").gsub("<script","スクリプトコートは許可されていません")%>
      <%= raw(@body) %>
+   </div>
+   <div class="article-button-container">
+     <% if !user_signed_in? %>
+         <%= button_to 'Like!  '+@article.liked_users.count.to_s, login_url, {method: :get, class: "article-like-button"} %>
+     <% elsif Like.find_by(article_id: params[:id],user_id: current_user.id) != nil %>
+       <%= button_to 'Liked!  '+@article.liked_users.count.to_s, article_like_path(@article), {method: :delete, class: "article-like-button liked"} %>
+     <% else %>
+       <%= button_to 'Like!  '+@article.liked_users.count.to_s, article_likes_path(@article), {method: :post, class: "article-like-button"} %>
+     <% end %>
+     <a href=""><button class="article-user-button">
+       <img class="writer-image" src=<%= asset_path "edit.png" %> alt="">
+       Writer
+     </button></a>
    </div>
 </div>
