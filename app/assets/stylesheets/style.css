@@ -356,6 +356,11 @@ user page style
   text-align: center;
 }
 
+
+#useEditPage{
+  text-align: center;
+}
+
 .user-buttomItem-upper{
   margin-bottom: 5px !important;
 }
@@ -381,5 +386,5 @@ user page style
 .edit-profile-button{
   width: 60%;
   margin-left: 20%;
-
 }
+
