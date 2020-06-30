@@ -5,6 +5,9 @@
     <img class="user-image" src=<%= asset_path "user.png" %> alt="">
   </div>
   <div class="user-name"><%= @user.name %></div>
+  <div class="user-profile">
+    <%= @user.profile %>
+  </div>
   <div class="user-bottom">
     <div class="user-buttomItem">
       <p class="user-buttomItem-upper"><%= Article.where(user_id: @user.id).length %></p>
@@ -18,5 +21,10 @@
       <p class="user-buttomItem-upper"><%= @liked %></p>
       <p class="user-buttomItem-buttom">Liked</p>
     </div>
+  </div>
+  <div class="user-profileEdit">
+    <% if current_user.id == @user.id %>
+      <%= button_to 'Edit Profile', edit_user_registration_path, {method: :get, class: "article-like-button edit-profile-button"} %>
+    <% end %>
   </div>
 </div>

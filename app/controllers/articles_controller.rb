@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user_id = current_user.id
     @article.save!
-    redirect_to "/", notice:"記事登録OK"
+    redirect_to "/", notice:"記事を投稿しました"
   end
 
   def show

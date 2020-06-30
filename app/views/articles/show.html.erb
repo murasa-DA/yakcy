@@ -16,7 +16,7 @@
      <% else %>
        <%= button_to 'Like!  '+@article.liked_users.count.to_s, article_likes_path(@article), {method: :post, class: "article-like-button"} %>
      <% end %>
-     <a href=""><button class="article-user-button">
+     <a href=<%="/users/"+@article.user_id.to_s%>><button class="article-user-button">
        <img class="writer-image" src=<%= asset_path "edit.png" %> alt="">
        Writer
      </button></a>

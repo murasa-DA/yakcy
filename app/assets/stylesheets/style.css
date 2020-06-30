@@ -12,6 +12,12 @@ a{
   text-decoration: none !important;
 }
 
+.main{
+  min-height:calc(100vh - 210px);
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
 .common_border{
     border: solid #e0e0e0 2px;
     border-radius: 10px;
@@ -69,6 +75,14 @@ header
   height: calc(100% - 10px);
 }
 
+.notice, .alert{
+  width: 100%;
+  background-color: black;
+  color:white;
+  margin: 0 !important;
+  font-size: 1.5rem;
+  padding-left: 30px;
+}
 
 /*
 footer
@@ -91,7 +105,7 @@ footer
 }
 
 .footer-element-version{
-  margin: 0px 0px 0px 25px;
+
 }
 
 .footer-element-inner{
@@ -340,4 +354,32 @@ user page style
 .user-buttomItem{
   width:150px;
   text-align: center;
+}
+
+.user-buttomItem-upper{
+  margin-bottom: 5px !important;
+}
+
+.user-buttomItem-buttom{
+  margin-top: 10px !important;
+  font-size: 16px;
+  color:gray;
+}
+
+.user-profile{
+  text-align: center;
+  line-height: 150%;
+  font-size: 1.1rem;
+}
+
+.user-profileEdit{
+  text-align: center;
+  width: 100%;
+  height: 60px;
+}
+
+.edit-profile-button{
+  width: 60%;
+  margin-left: 20%;
+
 }

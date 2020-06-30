@@ -19,11 +19,14 @@
       <div class="header-element flexbox">
         <% if user_signed_in? %>
         <div class="header-element-inner text_center_box common_border">
+          <%= link_to "ユーザー", "/users/"+current_user.id.to_s, class:"header-element-link" %>
+        </div>
+        <div class="header-element-inner text_center_box common_border">
+          <%= link_to "投稿", "/articles/new", class:"header-element-link" %>
+        </div>
+        <div class="header-element-inner text_center_box common_border">
           <%= link_to "ログアウト","/logout", class:"header-element-link" %>
          </div>
-         <div class="header-element-inner text_center_box common_border">
-           <%= link_to "投稿", "/articles/new", class:"header-element-link" %>
-          </div>
         <% else %>
         <div class="header-element-inner text_center_box common_border">
           <%= link_to "ログイン", "/users/sign_in", class:"header-element-link" %>
@@ -38,15 +41,16 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
-    <%= yield %>
+    <div class="main">
+      <%= yield %>
+    </div>
 
     <div id="footer">
       <div class="footer-element">
         <div class="footer-element-inner">
           <img class="footer-logo" src=<%= asset_path "yakcy_logo.png" %> alt="">
           <div class="footer-element-version">
-          バージョン(α1.0)
+          version: Alpha1.0 / 無断転載禁止
           </div>
         </div>
       </div>
