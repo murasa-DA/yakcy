@@ -1,20 +1,28 @@
-<div id="topLogo">
-    ロゴ画像
-</div>
 
-<div class="flexbox">
+<!-- flexbox やるとなんかバグる -->
+<div class="">
     <div id="mainContent">
-        <h2>新着記事一覧</h2>
+        <div class="headline">
+          <img class="home-icon" src=<%= asset_path "dashboard.png" %> alt="">
+          <div>新着記事一覧</div>
+        </div>
         <div id="articleList">
             <% @articles.each do |a| %>
-              <div class="article common_border">
+              <div class="article article_border">
+                <div class="tr-item">
+                  <img class="home-articleicon" src=<%= asset_path "user.png" %> alt="">
+                </div>
+                <div class="tr-item-body">
                   <a href="/articles/<%= a.id.to_s %>" ><h2 class="article_title"><%= a.article_title.to_s %></h2></a>
-                  <%= a.updated_at.to_s %>, by <%= User.find(a.user_id).email %>
+                  by <%= User.find(a.user_id).email %>, <%= a.updated_at.to_s %>, いいね:<%= a.liked_users.count%>
+                </div>
               </div>
             <% end %>
         </div>
     </div>
+    <!-- 実装する余裕ない泣
     <div id="sideber">
         サイドバー
     </div>
+    -->
 </div>
