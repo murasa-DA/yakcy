@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: yakcy_production
-  username: yakcy
-  password: <%= ENV['YAKCY_DATABASE_PASSWORD'] %>
