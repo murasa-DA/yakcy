@@ -1,27 +1,19 @@
-<h1>記事作成画面</h1>
-
 <div id="new_article_div">
   <%= form_for(@article) do |f| %>
     <div class="form_div">
-      <%= f.label :article_title %>
       <br>
-      <%= f.text_field :article_title, id:"articleTitle" %>
+      <%= f.text_field :article_title, id:"articleTitle", placeholder:"タイトルを入力してください" %>
     </div>
     <div class="form_div">
-      TagButtons
       <br>
       <div id="buttonArea" class="flexbox">
-        <div id="h1button" class="addTagButton common_border common_bg_color">見出し（大）</div>
-        <div id="h2button" class="addTagButton common_border common_bg_color">見出し（中）</div>
-        <div id="h3button" class="addTagButton common_border common_bg_color">見出し（小）</div>
-        <div id="broadbutton" class="addTagButton common_border common_bg_color">太字</div>
+        <div id="h1button" class="addTagButton text_center_box">h1</div>
+        <div id="h2button" class="addTagButton text_center_box">h2</div>
+        <div id="h3button" class="addTagButton text_center_box">h3</div>
+        <div id="broadbutton" class="addTagButton text_center_box">B</div>
       </div>
+      <%= f.text_area :article_data, id:"articleData", rows:"50", cols:"100", placeholder:"本文を入力してください・・・" %>
     </div>
-    <div class="form_div">
-      <%= f.label :article_data %>
-      <br>
-      <%= f.text_area :article_data, id:"articleData", rows:"50", cols:"100" %>
-    </div>
-    <%= f.submit "追加", class:"form_submit" %>
+    <%= f.submit "投稿", id:"newArticleButton" %>
   <%end%>
 </div>
