@@ -1,6 +1,5 @@
 
-<!-- flexbox やるとなんかバグる -->
-<div class="">
+<div class="home-top">
     <div id="mainContent">
         <div class="headline">
           <img class="home-icon" src=<%= asset_path "dashboard.png" %> alt="">
@@ -14,13 +13,13 @@
                 </div>
                 <div class="tr-item-body">
                   <a href="/articles/<%= a.id.to_s %>" ><h2 class="article_title"><%= a.article_title.to_s %></h2></a>
-                  by <%= User.find(a.user_id).email %>, <%= a.updated_at.to_s %>, いいね:<%= a.liked_users.count%>
+                  by <a href=<%="/users/"+a.user_id.to_s%>><%= User.find(a.user_id).name %></a>, <%= a.updated_at.to_s %>, いいね:<%= a.liked_users.count%>
                 </div>
               </div>
             <% end %>
         </div>
     </div>
-    <!-- 実装する余裕ない泣
+    <!-- 実装する余裕ない...
     <div id="sideber">
         サイドバー
     </div>
