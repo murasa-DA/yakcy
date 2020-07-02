@@ -81,3 +81,5 @@ test:
 production:
   <<: *default
   database: yakcy_production
+  username: y_murakawa
+  password: y_murakawa
